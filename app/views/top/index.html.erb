@@ -1,4 +1,6 @@
-<div class="alert alert-success"><%= alert %></div>
+<% if alert.present? %>
+  <div class="alert alert-success"><%= alert %></div>
+<% end %>
 
   <section class="main-header">
     <img src="<%= asset_path "achieve.png" %>">
