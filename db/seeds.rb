@@ -23,7 +23,7 @@ end
   str1 = user.id.to_s
   title = str1+str1
   content = str1+str1+str1+str1+str1
-  created_at = Faker::Time.between(DateTime.now - 1, DateTime.now)
+  created_at = Faker::Time.between(DateTime.now - 3.days, DateTime.now - 2.days)
   updated_at = created_at + 1.day
   user_id = user.id
   Blog.create!(title: title,
