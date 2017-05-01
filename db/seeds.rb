@@ -6,11 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-100.times do |n|
-  email = Faker::Internet.email
-  password = "password"
-  User.create!(email: email,
-               password: password,
-               password_confirmation: password,
+# 100.times do |n|
+#  email = Faker::Internet.email
+#  password = "password"
+#  User.create!(email: email,
+#               password: password,
+#               password_confirmation: password,
+#               )
+#end
+
+@users = User.all
+
+@users.each do |user|
+  str1 = user.id
+  title = str1+str1
+  content = str1+str1+str1+str1+str1
+  created_at = Faker::Time.between(DateTime.now - 1, DateTime.now)
+  updated_at = created_at + 1
+  user_id = user.id
+  Blog.create!(title: title,
+               content: content,
+               created_at: created_at,
+               updated_at: updated_at,
+               user_id: user_id,
                )
 end
