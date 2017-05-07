@@ -46,6 +46,7 @@ end
 gem 'twitter-bootstrap-rails'
 
 gem 'rails_12factor', group: :production
+gem 'beautiful-log'
 
 gem 'devise'
 
@@ -53,10 +54,11 @@ gem 'faker'
 
 group :development do
   gem 'letter_opener_web'
-  gem 'pry-rails'
   gem 'better_errors'
   gem 'dotenv-rails'
 end
+
+  gem 'pry-rails'
 
 gem 'rails_admin'
 gem 'cancan'
