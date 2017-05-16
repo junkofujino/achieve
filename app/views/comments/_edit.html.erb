@@ -1,0 +1,15 @@
+    <ul>
+          <li>
+
+              <% if @editform == true %>
+                <% if comment.id == @comment.id %>
+                <%= form_for([@blog,comment], remote: true) do |f| %>
+                    <%= f.text_field :blog_id %>
+                    <%= f.text_field :id %>
+                    <%= f.text_field :content, class: "form-control" %>
+                    <%= f.submit 'コメント更新', class: 'btn btn-primary btn-block' %>
+                  <% end %>
+                <% end %>
+              <% end %>
+          </li>
+    </ul>

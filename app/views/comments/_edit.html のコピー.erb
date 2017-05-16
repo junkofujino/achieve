@@ -1,0 +1,22 @@
+    <ul>
+      <% @comments.each do |comment| %>
+        <% unless comment.id.nil? %>
+          <li>
+            <p class="left"><%= comment.user.name %>さんがコメントしました。</p>
+            <p class="left"><%= comment.content %></p>
+
+            <% if comment.id == @comment.id %>
+              <%= form_for([@blog,comment]) do |f| %>
+                <%= f.hidden_field :blog_id %>
+                <%= f.hidden_field :id %>
+                <%= f.text_field :content, class: "form-control" %>
+                <%= f.submit 'コメント更新', class: 'btn btn-primary btn-block' %>
+              <% end %>
+            <% end %>
+
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+
+    <%= link_to 'コメント一覧へ戻る', blog_path(@blog), class: 'btn btn-default' %>

@@ -1,0 +1,2 @@
+$("#edit_area").html("<%= j(render 'comments/edit', { comment: @comment, comments: @comment.blog.comments, blog: @comment.blog }) %>")
+$(':text').val('')

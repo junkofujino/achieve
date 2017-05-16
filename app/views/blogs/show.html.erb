@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<div class="child row">
+  <div class="wrapper col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <div class="blog-text">
+      <div class="row" id="row1">
+          <div class="col" id="col1">
+            <p class="left"><strong>タイトル</strong></p>
+            <p class="left"><%= @blog.title %></p>
+            <p class="left"><strong>内容</strong></p>
+            <p class="left"><%= @blog.content %></p>
+          </div>
+          <div class="col" id="col2">
+            <p class="right">
+              <strong>作成者:</strong>
+              <%= @blog.user.name %><br>
+              <strong>作成時間:</strong>
+              <%= @blog.created_at.strftime("%y/%m/%d %p %l:%M") %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <div>
+      <p>コメント一覧</p>
+      <div id="comments_area">
+        <%= render partial: 'comments/index', locals: { comment: @comment, comments: @comments, blog: @blog } %>
+      </div>
+      <div id="edit_area">
+        <%= render partial: 'comments/edit', locals: { comment: @comment, comments: @comments, blog: @blog } %>
+      </div>
+      <%= render partial: 'comments/form', locals: { comment_new: @comment_new, blog: @blog } %>
+      <% if current_user.id == @blog.user_id %>
+        <%= link_to 'ブログ編集', edit_blog_path(@blog), class: 'btn btn-sml btn-success' %>
+      <% end %>
+      <%= link_to 'ブログ一覧へ戻る', blogs_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+</div>
