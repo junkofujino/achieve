@@ -22,12 +22,9 @@
     <div>
       <p>コメント一覧</p>
       <div id="comments_area">
-        <%= render partial: 'comments/index', locals: { comment: @comment, comments: @comments, blog: @blog } %>
+        <%= render partial: 'comments/index', locals: { comments: @comments, blog: @blog } %>
       </div>
-      <div id="edit_area">
-        <%= render partial: 'comments/edit', locals: { comment: @comment, comments: @comments, blog: @blog } %>
-      </div>
-      <%= render partial: 'comments/form', locals: { comment_new: @comment_new, blog: @blog } %>
+      <%= render partial: 'comments/form', locals: { comment: @comment, blog: @blog } %>
       <% if current_user.id == @blog.user_id %>
         <%= link_to 'ブログ編集', edit_blog_path(@blog), class: 'btn btn-sml btn-success' %>
       <% end %>

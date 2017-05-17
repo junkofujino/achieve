@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
   end
 
   def show
-    @comment_new = @blog.comments.build
+    @comment = @blog.comments.build
     @comments = @blog.comments
   end
 

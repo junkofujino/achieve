@@ -5,8 +5,14 @@
         <p class="left"><%= comment.user.name %>さんがコメントしました。</p>
         <p class="left"><%= comment.content %></p>
 
-        <%= comment.blog_id %>
-        <%= comment.id %>
+        <% if @editform == true %>
+          <% if comment.id == @comment.id %>
+          <%= form_for([blog,comment], remote: true) do |f| %>
+              <%= f.text_field :content, class: "form-control" %>
+              <%= f.submit 'コメント更新', class: 'btn btn-primary btn-block' %>
+            <% end %>
+          <% end %>
+        <% end %>
 
         <% if current_user.id == comment.user.id %>
           <p class="right">

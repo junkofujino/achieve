@@ -1,18 +1,18 @@
-<%= form_for([blog,comment_new], remote: true) do |f| %>
-  <% if comment_new.errors.any? %>
+<%= form_for([blog,comment], remote: true) do |f| %>
+  <% if comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= comment_new.errors.count %>件のエラーがあります。</h2>
+      <h2><%= comment.errors.count %>件のエラーがあります。</h2>
 
       <ul>
-      <% comment_new.errors.full_message.each do |msg| %>
+      <% comment.errors.full_message.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <%= f.text_field :blog_id %>
-  <%= f.text_field :id %>
+  <%= f.hidden_field :blog_id %>
+
   <div class="field">
     <%= f.text_field :content, placeholder: "内容", class: "form-control" %>
   </div>
