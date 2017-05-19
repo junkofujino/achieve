@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def profile_img(user,page)
+  def profile_img(user,page='others')
     return image_tag(user.avatar, alt: user.name, class:'img-circle') if user.avatar?
 
     unless user.provider.blank?
