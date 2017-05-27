@@ -1,0 +1,18 @@
+language: ruby
+
+sudo: false
+
+rvm:
+  - 2.3.1
+  - 2.2.2
+  - 2.1.6
+  - 2.0.0
+  - 1.9.3
+
+gemfile:
+  - gemfiles/Gemfile.activemodel-4.2
+  - gemfiles/Gemfile.activemodel-4.1
+  - gemfiles/Gemfile.activemodel-4.0
+  - gemfiles/Gemfile.activemodel-3.2.x
+
+script: "echo 'COME ON!' && bundle exec rake spec"

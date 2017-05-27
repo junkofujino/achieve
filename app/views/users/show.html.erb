@@ -6,13 +6,15 @@
           <div class="row" id="row1">
             <div class="col" id="col5">
               <h4><strong><%= @user.name %></strong></h4>
-              <%= @user.email %>
-              <% unless @user == current_user %>
-                <%= render 'follow_form', user: @user %>
-              <% end %>
+              <%= @user.email %><br>
+              <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: 'post' %>
+
             </div>
             <div class="col" id="col6">
-              <p class="img1"><%= profile_img(@user) %></p>
+              <p class="img1"><%= profile_img(@user) %></p><br>
+              <% if @user != current_user && signed_in? %>
+                <%= render 'follow_form', user: @user %>
+              <% end %>
             </div>
           </div>
         </div>

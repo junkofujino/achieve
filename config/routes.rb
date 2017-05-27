@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
 
+  resources :conversations, only: [:index, :create] do
+    resources :messages, only: [:index, :create]
+  end
+
   resources :blogs do
     resources :comments
     post :confirm, on: :collection
