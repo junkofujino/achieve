@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
     if params[:notification_id]
       notifications = Notification.where(comment: @comments)
       notifications.update_all(read: true)
-      @notifications_count = Notification.where(user_id: current_user).where(read: false).count
+      #@notifications_count = Notification.where(user_id: current_user).where(read: false).count
     end
   end
 
