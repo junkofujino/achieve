@@ -1,7 +1,7 @@
   <h2>ユーザー一覧</h2>
    <% @users.each do |user| %>
-   <div class="wrapper col-md-2 col-sm-4 col-xs-6 ">
-   <div class="row" id="row1">
+   <div class="col-md-2 col-sm-4 col-xs-6 ">
+   <div class="row" id="row4">
         <%= link_to user_path(user.id) do %>
           <h4><strong><%= user.name %></strong></h4>
         <% end %>
