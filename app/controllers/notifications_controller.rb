@@ -7,6 +7,6 @@ class NotificationsController < ApplicationController
     noti2 = Notification
               .where(user_id: current_user.id).where(read: true, created_at: (7.days.ago)..(Time.now)).order(created_at: :desc)
     @notifications = noti1 + noti2
-    #@notifications_count = Notification.where(user_id: current_user).where(read: false).count
+    @notifications_count = Notification.where(user_id: current_user).where(read: false).count
   end
 end
