@@ -11,7 +11,7 @@
 
             </div>
             <div class="col" id="col6">
-              <p class="img1"><%= profile_img(@user) %></p><br>
+              <p><%= profile_img(@user) %></p><br>
               <% if @user != current_user && signed_in? %>
                 <%= render 'follow_form', user: @user %>
               <% end %>
