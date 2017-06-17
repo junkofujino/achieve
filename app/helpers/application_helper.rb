@@ -11,7 +11,7 @@ module ApplicationHelper
     if page == 'blogs'
      image_tag(img_url, alt: user.name, class:'img1')
     else
-     image_tag(img_url, alt: user.name)
+     image_tag(img_url, alt: user.name class:'img1')
     end
   end
 end
