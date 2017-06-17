@@ -28,9 +28,9 @@
               <%= link_to user_path(followed_user.id) do %>
                 <h4><strong><%= followed_user.name %></strong></h4>
               <% end %>
-              <% unless followed_user == current_user %>
+              <!-- <% unless followed_user == current_user %>
                 <%= render 'follow_form', user: followed_user %>
-              <% end %>
+              <% end %> -->
             </div>
             <div class="col" id="col6">
               <p class="img2"><%= profile_img(followed_user) %></p>
@@ -47,9 +47,9 @@
             <%= link_to user_path(follower.id) do %>
               <h4><strong><%= follower.name %></strong></h4>
             <% end %>
-            <% unless follower == current_user %>
+            <!-- <% unless follower == current_user %>
               <%= render 'follow_form', user: follower %>
-            <% end %>
+            <% end %> -->
           </div>
           <div class="col" id="col6">
             <p class="img2"><%= profile_img(follower) %></p>
