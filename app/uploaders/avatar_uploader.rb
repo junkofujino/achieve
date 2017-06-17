@@ -46,4 +46,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "something.jpg" if original_filename
   # end
 
+  # サムネイルを生成する設定
+ version :thumb do
+   process :resize_to_limit => [300, 300]
+ end
+
 end
