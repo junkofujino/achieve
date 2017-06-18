@@ -15,6 +15,7 @@ class BlogsController < ApplicationController
       notifications.update_all(read: true)
       @notifications_count = Notification.where(user_id: current_user).where(read: false).count
     end
+    sleep(3)
   end
 
   def new
