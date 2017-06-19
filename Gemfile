@@ -76,3 +76,5 @@ gem 'rmagick'
 gem 'rb-readline'
 
 gem 'pusher'
+
+gem 'fog'
