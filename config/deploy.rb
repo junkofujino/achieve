@@ -7,7 +7,7 @@ set :application, 'achieve'
 set :repo_url, 'https://github.com/junkofujino/achieve'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
-set :branch, ENV['BRANCH'] || 'master'
+set :branch, ENV['BRANCH'] || 'develop'
 
 # deploy先のディレクトリ。
 set :deploy_to, '/var/www/achieve'
