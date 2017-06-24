@@ -10330,3 +10330,332 @@ Called from /var/www/achieve/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.3/l
   INFO [5dbca2d2] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/achieve/current/config/unicorn/production.rb -E deployment -D  as app@13.113.119.64
  DEBUG [5dbca2d2] Command: cd /var/www/achieve/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/achieve/current/config/unicorn/production.rb -E deployment -D  )
   INFO [5dbca2d2] Finished in 3.227 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-25 00:06:01 +0900 cap production unicorn:start
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9bd5df7d] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@13.113.119.64
+ DEBUG [9bd5df7d] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [9bd5df7d] Finished in 0.496 seconds with exit status 0 (successful).
+ DEBUG [0959d796] Running if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [0959d796] Command: if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi
+ DEBUG [0959d796] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [93af0b75] Running [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid` as app@13.113.119.64
+ DEBUG [93af0b75] Command: [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid`
+ DEBUG [93af0b75] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-25 00:06:31 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ce6e95d0] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@13.113.119.64
+ DEBUG [ce6e95d0] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [ce6e95d0] Finished in 0.317 seconds with exit status 0 (successful).
+  INFO [4945d364] Running /usr/bin/env mkdir -p /tmp as app@13.113.119.64
+ DEBUG [4945d364] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [4945d364] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-achieve-production-fujinojunko.sh 0.0%
+  INFO Uploading /tmp/git-ssh-achieve-production-fujinojunko.sh 100.0%
+  INFO [2c7ec179] Running /usr/bin/env chmod 700 /tmp/git-ssh-achieve-production-fujinojunko.sh as app@13.113.119.64
+ DEBUG [2c7ec179] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-achieve-production-fujinojunko.sh )
+  INFO [2c7ec179] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [fc0dd114] Running /usr/bin/env git ls-remote --heads https://github.com/junkofujino/achieve as app@13.113.119.64
+ DEBUG [fc0dd114] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-achieve-production-fujinojunko.sh" ; /usr/bin/env git ls-remote --heads https://github.com/junkofujino/achieve )
+ DEBUG [fc0dd114] 	25bdb01303af5d563a495121c7634d58b591b65b	refs/heads/develop
+c3424f10b3e4217b2dcab4ef3b0063038db2e442	refs/heads/master
+  INFO [fc0dd114] Finished in 0.616 seconds with exit status 0 (successful).
+  INFO [cb23860e] Running /usr/bin/env mkdir -p /var/www/achieve/shared /var/www/achieve/releases as app@13.113.119.64
+ DEBUG [cb23860e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/achieve/shared /var/www/achieve/releases )
+  INFO [cb23860e] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [43c0cba1] Running /usr/bin/env mkdir -p /var/www/achieve/shared/log /var/www/achieve/shared/tmp/pids /var/www/achieve/shared/tmp/cache /var/www/achieve/shared/tmp/sockets /var/www/achieve/shared/public/uploads /var/www/achieve/shared/public/assets as app@13.113.119.64
+ DEBUG [43c0cba1] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/achieve/shared/log /var/www/achieve/shared/tmp/pids /var/www/achieve/shared/tmp/cache /var/www/achieve/shared/tmp/sockets /var/www/achieve/shared/public/uploads /var/www/achieve/shared/public/assets )
+  INFO [43c0cba1] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [bc7c8f70] Running /usr/bin/env mkdir -p /var/www/achieve/shared /var/www/achieve/shared/config as app@13.113.119.64
+ DEBUG [bc7c8f70] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/achieve/shared /var/www/achieve/shared/config )
+  INFO [bc7c8f70] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [3ccbe152] Running [ -f /var/www/achieve/shared/.env ] as app@13.113.119.64
+ DEBUG [3ccbe152] Command: [ -f /var/www/achieve/shared/.env ]
+ DEBUG [3ccbe152] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [e910c60d] Running [ -f /var/www/achieve/shared/config/secrets.yml ] as app@13.113.119.64
+ DEBUG [e910c60d] Command: [ -f /var/www/achieve/shared/config/secrets.yml ]
+ DEBUG [e910c60d] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [6106c490] Running [ -f /var/www/achieve/current/REVISION ] as app@13.113.119.64
+ DEBUG [6106c490] Command: [ -f /var/www/achieve/current/REVISION ]
+ DEBUG [6106c490] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [e14964e0] Running /usr/bin/env cat /var/www/achieve/current/REVISION 2>/dev/null as app@13.113.119.64
+ DEBUG [e14964e0] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cat /var/www/achieve/current/REVISION 2>/dev/null )
+ DEBUG [e14964e0] 	591df9a7940b92de3e95f713ec11cbed167c284f
+ DEBUG [e14964e0] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [a8adf12d] Running [ -f /var/www/achieve/repo/HEAD ] as app@13.113.119.64
+ DEBUG [a8adf12d] Command: [ -f /var/www/achieve/repo/HEAD ]
+ DEBUG [a8adf12d] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/achieve/repo
+ DEBUG [36d12a4a] Running if test ! -d /var/www/achieve/repo; then echo "Directory does not exist '/var/www/achieve/repo'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [36d12a4a] Command: if test ! -d /var/www/achieve/repo; then echo "Directory does not exist '/var/www/achieve/repo'" 1>&2; false; fi
+ DEBUG [36d12a4a] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [6c88677e] Running /usr/bin/env git remote update --prune as app@13.113.119.64
+ DEBUG [6c88677e] Command: cd /var/www/achieve/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-achieve-production-fujinojunko.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6c88677e] 	Fetching origin
+ DEBUG [6c88677e] 	From https://github.com/junkofujino/achieve
+   591df9a..25bdb01  develop    -> develop
+  INFO [6c88677e] Finished in 1.182 seconds with exit status 0 (successful).
+ DEBUG [a3c6ca05] Running if test ! -d /var/www/achieve/repo; then echo "Directory does not exist '/var/www/achieve/repo'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [a3c6ca05] Command: if test ! -d /var/www/achieve/repo; then echo "Directory does not exist '/var/www/achieve/repo'" 1>&2; false; fi
+ DEBUG [a3c6ca05] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [7ee143cf] Running /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632 as app@13.113.119.64
+ DEBUG [7ee143cf] Command: cd /var/www/achieve/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-achieve-production-fujinojunko.sh" ; /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632 )
+  INFO [7ee143cf] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [ca08d60a] Running /usr/bin/env git archive develop | tar -x -f - -C /var/www/achieve/releases/20170624150632 as app@13.113.119.64
+ DEBUG [ca08d60a] Command: cd /var/www/achieve/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-achieve-production-fujinojunko.sh" ; /usr/bin/env git archive develop | tar -x -f - -C /var/www/achieve/releases/20170624150632 )
+  INFO [ca08d60a] Finished in 3.561 seconds with exit status 0 (successful).
+ DEBUG [08c8cb6b] Running if test ! -d /var/www/achieve/repo; then echo "Directory does not exist '/var/www/achieve/repo'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [08c8cb6b] Command: if test ! -d /var/www/achieve/repo; then echo "Directory does not exist '/var/www/achieve/repo'" 1>&2; false; fi
+ DEBUG [08c8cb6b] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG [34c35ca7] Running /usr/bin/env git rev-list --max-count=1 develop as app@13.113.119.64
+ DEBUG [34c35ca7] Command: cd /var/www/achieve/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-achieve-production-fujinojunko.sh" ; /usr/bin/env git rev-list --max-count=1 develop )
+ DEBUG [34c35ca7] 	25bdb01303af5d563a495121c7634d58b591b65b
+ DEBUG [34c35ca7] Finished in 0.363 seconds with exit status 0 (successful).
+ DEBUG [1abc1425] Running if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [1abc1425] Command: if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi
+ DEBUG [1abc1425] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [69587aa0] Running /usr/bin/env echo "25bdb01303af5d563a495121c7634d58b591b65b" >> REVISION as app@13.113.119.64
+ DEBUG [69587aa0] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "25bdb01303af5d563a495121c7634d58b591b65b" >> REVISION )
+  INFO [69587aa0] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [084cc51d] Running /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632 /var/www/achieve/releases/20170624150632/config as app@13.113.119.64
+ DEBUG [084cc51d] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632 /var/www/achieve/releases/20170624150632/config )
+  INFO [084cc51d] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [d5890154] Running [ -L /var/www/achieve/releases/20170624150632/.env ] as app@13.113.119.64
+ DEBUG [d5890154] Command: [ -L /var/www/achieve/releases/20170624150632/.env ]
+ DEBUG [d5890154] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [d2ba2fe9] Running [ -f /var/www/achieve/releases/20170624150632/.env ] as app@13.113.119.64
+ DEBUG [d2ba2fe9] Command: [ -f /var/www/achieve/releases/20170624150632/.env ]
+ DEBUG [d2ba2fe9] Finished in 0.064 seconds with exit status 1 (failed).
+  INFO [c041d87e] Running /usr/bin/env ln -s /var/www/achieve/shared/.env /var/www/achieve/releases/20170624150632/.env as app@13.113.119.64
+ DEBUG [c041d87e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/.env /var/www/achieve/releases/20170624150632/.env )
+  INFO [c041d87e] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [7bdf41fb] Running [ -L /var/www/achieve/releases/20170624150632/config/secrets.yml ] as app@13.113.119.64
+ DEBUG [7bdf41fb] Command: [ -L /var/www/achieve/releases/20170624150632/config/secrets.yml ]
+ DEBUG [7bdf41fb] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [e30af62e] Running [ -f /var/www/achieve/releases/20170624150632/config/secrets.yml ] as app@13.113.119.64
+ DEBUG [e30af62e] Command: [ -f /var/www/achieve/releases/20170624150632/config/secrets.yml ]
+ DEBUG [e30af62e] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [8068b950] Running /usr/bin/env rm /var/www/achieve/releases/20170624150632/config/secrets.yml as app@13.113.119.64
+ DEBUG [8068b950] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/achieve/releases/20170624150632/config/secrets.yml )
+  INFO [8068b950] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [26aa6b08] Running /usr/bin/env ln -s /var/www/achieve/shared/config/secrets.yml /var/www/achieve/releases/20170624150632/config/secrets.yml as app@13.113.119.64
+ DEBUG [26aa6b08] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/config/secrets.yml /var/www/achieve/releases/20170624150632/config/secrets.yml )
+  INFO [26aa6b08] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [e81b192a] Running /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632 /var/www/achieve/releases/20170624150632/tmp /var/www/achieve/releases/20170624150632/public as app@13.113.119.64
+ DEBUG [e81b192a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632 /var/www/achieve/releases/20170624150632/tmp /var/www/achieve/releases/20170624150632/public )
+  INFO [e81b192a] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [c548b447] Running [ -L /var/www/achieve/releases/20170624150632/log ] as app@13.113.119.64
+ DEBUG [c548b447] Command: [ -L /var/www/achieve/releases/20170624150632/log ]
+ DEBUG [c548b447] Finished in 0.064 seconds with exit status 1 (failed).
+ DEBUG [28da1064] Running [ -d /var/www/achieve/releases/20170624150632/log ] as app@13.113.119.64
+ DEBUG [28da1064] Command: [ -d /var/www/achieve/releases/20170624150632/log ]
+ DEBUG [28da1064] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [9deab73e] Running /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/log as app@13.113.119.64
+ DEBUG [9deab73e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/log )
+  INFO [9deab73e] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [5e1d7d3c] Running /usr/bin/env ln -s /var/www/achieve/shared/log /var/www/achieve/releases/20170624150632/log as app@13.113.119.64
+ DEBUG [5e1d7d3c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/log /var/www/achieve/releases/20170624150632/log )
+  INFO [5e1d7d3c] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [2c5d0077] Running [ -L /var/www/achieve/releases/20170624150632/tmp/pids ] as app@13.113.119.64
+ DEBUG [2c5d0077] Command: [ -L /var/www/achieve/releases/20170624150632/tmp/pids ]
+ DEBUG [2c5d0077] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [70c4cd94] Running [ -d /var/www/achieve/releases/20170624150632/tmp/pids ] as app@13.113.119.64
+ DEBUG [70c4cd94] Command: [ -d /var/www/achieve/releases/20170624150632/tmp/pids ]
+ DEBUG [70c4cd94] Finished in 0.073 seconds with exit status 1 (failed).
+  INFO [f9dbe0b7] Running /usr/bin/env ln -s /var/www/achieve/shared/tmp/pids /var/www/achieve/releases/20170624150632/tmp/pids as app@13.113.119.64
+ DEBUG [f9dbe0b7] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/tmp/pids /var/www/achieve/releases/20170624150632/tmp/pids )
+  INFO [f9dbe0b7] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [451f9674] Running [ -L /var/www/achieve/releases/20170624150632/tmp/cache ] as app@13.113.119.64
+ DEBUG [451f9674] Command: [ -L /var/www/achieve/releases/20170624150632/tmp/cache ]
+ DEBUG [451f9674] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [5b5e9597] Running [ -d /var/www/achieve/releases/20170624150632/tmp/cache ] as app@13.113.119.64
+ DEBUG [5b5e9597] Command: [ -d /var/www/achieve/releases/20170624150632/tmp/cache ]
+ DEBUG [5b5e9597] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [9e85ba34] Running /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/tmp/cache as app@13.113.119.64
+ DEBUG [9e85ba34] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/tmp/cache )
+  INFO [9e85ba34] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [6c1da90e] Running /usr/bin/env ln -s /var/www/achieve/shared/tmp/cache /var/www/achieve/releases/20170624150632/tmp/cache as app@13.113.119.64
+ DEBUG [6c1da90e] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/tmp/cache /var/www/achieve/releases/20170624150632/tmp/cache )
+  INFO [6c1da90e] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [141cb4e8] Running [ -L /var/www/achieve/releases/20170624150632/tmp/sockets ] as app@13.113.119.64
+ DEBUG [141cb4e8] Command: [ -L /var/www/achieve/releases/20170624150632/tmp/sockets ]
+ DEBUG [141cb4e8] Finished in 0.062 seconds with exit status 1 (failed).
+ DEBUG [742f7ab6] Running [ -d /var/www/achieve/releases/20170624150632/tmp/sockets ] as app@13.113.119.64
+ DEBUG [742f7ab6] Command: [ -d /var/www/achieve/releases/20170624150632/tmp/sockets ]
+ DEBUG [742f7ab6] Finished in 0.062 seconds with exit status 1 (failed).
+  INFO [7cb0eb32] Running /usr/bin/env ln -s /var/www/achieve/shared/tmp/sockets /var/www/achieve/releases/20170624150632/tmp/sockets as app@13.113.119.64
+ DEBUG [7cb0eb32] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/tmp/sockets /var/www/achieve/releases/20170624150632/tmp/sockets )
+  INFO [7cb0eb32] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [900a9d93] Running [ -L /var/www/achieve/releases/20170624150632/public/uploads ] as app@13.113.119.64
+ DEBUG [900a9d93] Command: [ -L /var/www/achieve/releases/20170624150632/public/uploads ]
+ DEBUG [900a9d93] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [0ed97aa6] Running [ -d /var/www/achieve/releases/20170624150632/public/uploads ] as app@13.113.119.64
+ DEBUG [0ed97aa6] Command: [ -d /var/www/achieve/releases/20170624150632/public/uploads ]
+ DEBUG [0ed97aa6] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [3e5c2976] Running /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/public/uploads as app@13.113.119.64
+ DEBUG [3e5c2976] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/public/uploads )
+  INFO [3e5c2976] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [6adf0de7] Running /usr/bin/env ln -s /var/www/achieve/shared/public/uploads /var/www/achieve/releases/20170624150632/public/uploads as app@13.113.119.64
+ DEBUG [6adf0de7] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/public/uploads /var/www/achieve/releases/20170624150632/public/uploads )
+  INFO [6adf0de7] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [44870a36] Running [ -L /var/www/achieve/releases/20170624150632/public/assets ] as app@13.113.119.64
+ DEBUG [44870a36] Command: [ -L /var/www/achieve/releases/20170624150632/public/assets ]
+ DEBUG [44870a36] Finished in 0.070 seconds with exit status 1 (failed).
+ DEBUG [bd78ee4d] Running [ -d /var/www/achieve/releases/20170624150632/public/assets ] as app@13.113.119.64
+ DEBUG [bd78ee4d] Command: [ -d /var/www/achieve/releases/20170624150632/public/assets ]
+ DEBUG [bd78ee4d] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [26d57700] Running /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/public/assets as app@13.113.119.64
+ DEBUG [26d57700] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/achieve/releases/20170624150632/public/assets )
+  INFO [26d57700] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [38aa8d6b] Running /usr/bin/env ln -s /var/www/achieve/shared/public/assets /var/www/achieve/releases/20170624150632/public/assets as app@13.113.119.64
+ DEBUG [38aa8d6b] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/shared/public/assets /var/www/achieve/releases/20170624150632/public/assets )
+  INFO [38aa8d6b] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [dfa81f55] Running if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [dfa81f55] Command: if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi
+ DEBUG [dfa81f55] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [a3301b5f] Running /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/achieve/shared/bundle as app@13.113.119.64
+ DEBUG [a3301b5f] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/achieve/shared/bundle )
+ DEBUG [a3301b5f] 	The following gems are missing
+ DEBUG [a3301b5f] 	 * byebug (9.0.6)
+ DEBUG [a3301b5f] 	 * debug_inspector (0.0.3)
+ DEBUG [a3301b5f] 	 * binding_of_caller (0.7.2)
+ DEBUG [a3301b5f] 	 * web-console (2.3.0)
+ DEBUG [a3301b5f] 	 * spring (2.0.2)
+ DEBUG [a3301b5f] 	 * net-ssh (4.1.0)
+ DEBUG [a3301b5f] 	 * net-scp (1.2.1)
+ DEBUG [a3301b5f] 	 * sshkit (1.13.1)
+ DEBUG [a3301b5f] 	 * airbrussh (1.3.0)
+ DEBUG [a3301b5f] 	 * capistrano-harrow (0.5.3)
+ DEBUG [a3301b5f] 	 * capistrano (3.6.0)
+ DEBUG [a3301b5f] 	 * capistrano-bundler (1.2.0)
+ DEBUG [a3301b5f] 	 * capistrano-rails (1.3.0)
+ DEBUG [a3301b5f] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [a3301b5f] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [a3301b5f] 	 * public_suffix (2.0.5)
+ DEBUG [a3301b5f] 	 * addressable (2.5.1)
+ DEBUG [a3301b5f] 	 * launchy (2.4.3)
+ DEBUG [a3301b5f] 	 * letter_opener (1.4.1)
+ DEBUG [a3301b5f] 	 * letter_opener_web (1.3.1)
+ DEBUG [a3301b5f] 	 * coderay (1.1.1)
+ DEBUG [a3301b5f] 	 * method_source (0.8.2)
+ DEBUG [a3301b5f] 	 * slop (3.6.0)
+ DEBUG [a3301b5f] 	 * pry (0.10.4)
+ DEBUG [a3301b5f] 	 * pry-rails (0.3.6)
+ DEBUG [a3301b5f] 	 * better_errors (2.1.1)
+ DEBUG [a3301b5f] 	Install missing gems with `bundle install`
+ DEBUG [a3301b5f] Finished in 0.406 seconds with exit status 1 (failed).
+  INFO [49bc6e28] Running /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/achieve/shared/bundle --without development test --deployment --quiet as app@13.113.119.64
+ DEBUG [49bc6e28] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/achieve/shared/bundle --without development test --deployment --quiet )
+  INFO [49bc6e28] Finished in 2.956 seconds with exit status 0 (successful).
+ DEBUG [aac462d1] Running if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [aac462d1] Command: if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi
+ DEBUG [aac462d1] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [67d84fd2] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@13.113.119.64
+ DEBUG [67d84fd2] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [67d84fd2] Finished in 3.414 seconds with exit status 0 (successful).
+ DEBUG [980b6a53] Running if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [980b6a53] Command: if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi
+ DEBUG [980b6a53] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [1768293e] Running /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632/assets_manifest_backup as app@13.113.119.64
+ DEBUG [1768293e] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/achieve/releases/20170624150632/assets_manifest_backup )
+  INFO [1768293e] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [373db724] Running /usr/bin/env ls /var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest* as app@13.113.119.64
+ DEBUG [373db724] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest* )
+ DEBUG [373db724] 	/var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest-2c2905c640c9f5237095e9b2a0fe59e7.json
+ DEBUG [373db724] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [f66a9bc8] Running /usr/bin/env ls /var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest* as app@13.113.119.64
+ DEBUG [f66a9bc8] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest* )
+ DEBUG [f66a9bc8] 	/var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest-2c2905c640c9f5237095e9b2a0fe59e7.json
+ DEBUG [f66a9bc8] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [540feebb] Running /usr/bin/env cp /var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest-2c2905c640c9f5237095e9b2a0fe59e7.json /var/www/achieve/releases/20170624150632/assets_manifest_backup as app@13.113.119.64
+ DEBUG [540feebb] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cp /var/www/achieve/releases/20170624150632/public/assets/.sprockets-manifest-2c2905c640c9f5237095e9b2a0fe59e7.json /var/www/achieve/releases/20170624150632/assets_manifest_backup )
+  INFO [540feebb] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [0d9c4d82] Running if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [0d9c4d82] Command: if test ! -d /var/www/achieve/releases/20170624150632; then echo "Directory does not exist '/var/www/achieve/releases/20170624150632'" 1>&2; false; fi
+ DEBUG [0d9c4d82] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [6d74b632] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate as app@13.113.119.64
+ DEBUG [6d74b632] Command: cd /var/www/achieve/releases/20170624150632 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [6d74b632] 	[db:load_config ] started
+ DEBUG [6d74b632] 	[db:load_config ] finished
+ DEBUG [6d74b632] 	[db:migrate ] started
+ DEBUG [6d74b632] 	The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /var/www/achieve/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.3/lib/active_support/dependencies.rb:240:in `load_dependency'
+ DEBUG [6d74b632] 	  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+ DEBUG [6d74b632] 	[db:migrate ] finished
+  INFO [6d74b632] Finished in 2.870 seconds with exit status 0 (successful).
+  INFO [e024409a] Running /usr/bin/env ln -s /var/www/achieve/releases/20170624150632 /var/www/achieve/releases/current as app@13.113.119.64
+ DEBUG [e024409a] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/achieve/releases/20170624150632 /var/www/achieve/releases/current )
+  INFO [e024409a] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [18090472] Running /usr/bin/env mv /var/www/achieve/releases/current /var/www/achieve as app@13.113.119.64
+ DEBUG [18090472] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mv /var/www/achieve/releases/current /var/www/achieve )
+  INFO [18090472] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [83cef495] Running if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [83cef495] Command: if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi
+ DEBUG [83cef495] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [61298b3b] Running [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid` as app@13.113.119.64
+ DEBUG [61298b3b] Command: [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid`
+ DEBUG [61298b3b] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [764ade69] Running if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [764ade69] Command: if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi
+ DEBUG [764ade69] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [4849eaf2] Running /usr/bin/env kill -s USR2 `cat /var/www/achieve/current/tmp/pids/unicorn.pid` as app@13.113.119.64
+ DEBUG [4849eaf2] Command: cd /var/www/achieve/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s USR2 `cat /var/www/achieve/current/tmp/pids/unicorn.pid` )
+  INFO [4849eaf2] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [cedd44c3] Running /usr/bin/env ls -xtr /var/www/achieve/releases as app@13.113.119.64
+ DEBUG [cedd44c3] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls -xtr /var/www/achieve/releases )
+ DEBUG [cedd44c3] 	20170624140658	20170624141539	20170624141601	20170624143423	20170624144521
+20170624150632
+ DEBUG [cedd44c3] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 13.113.119.64
+  INFO [2aec532f] Running /usr/bin/env rm -rf /var/www/achieve/releases/20170624140658 as app@13.113.119.64
+ DEBUG [2aec532f] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/achieve/releases/20170624140658 )
+  INFO [2aec532f] Finished in 1.963 seconds with exit status 0 (successful).
+ DEBUG [2335f634] Running if test ! -d /var/www/achieve/releases; then echo "Directory does not exist '/var/www/achieve/releases'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [2335f634] Command: if test ! -d /var/www/achieve/releases; then echo "Directory does not exist '/var/www/achieve/releases'" 1>&2; false; fi
+ DEBUG [2335f634] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [4ea49b82] Running /usr/bin/env echo "Branch develop (at 25bdb01303af5d563a495121c7634d58b591b65b) deployed as release 20170624150632 by fujinojunko" >> /var/www/achieve/revisions.log as app@13.113.119.64
+ DEBUG [4ea49b82] Command: cd /var/www/achieve/releases && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "Branch develop (at 25bdb01303af5d563a495121c7634d58b591b65b) deployed as release 20170624150632 by fujinojunko" >> /var/www/achieve/revisions.log )
+  INFO [4ea49b82] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-25 00:07:27 +0900 cap production unicorn:stop
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8489ee5f] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@13.113.119.64
+ DEBUG [8489ee5f] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [8489ee5f] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG [cbf1ead9] Running if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [cbf1ead9] Command: if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi
+ DEBUG [cbf1ead9] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [f715bc2d] Running [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] as app@13.113.119.64
+ DEBUG [f715bc2d] Command: [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ]
+ DEBUG [f715bc2d] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [41acc33b] Running kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid` as app@13.113.119.64
+ DEBUG [41acc33b] Command: kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid`
+ DEBUG [41acc33b] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO stopping unicorn...
+  INFO [6a99359d] Running /usr/bin/env kill -s QUIT `cat /var/www/achieve/current/tmp/pids/unicorn.pid` as app@13.113.119.64
+ DEBUG [6a99359d] Command: cd /var/www/achieve/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s QUIT `cat /var/www/achieve/current/tmp/pids/unicorn.pid` )
+  INFO [6a99359d] Finished in 0.075 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-25 00:07:33 +0900 cap production unicorn:start
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1d3cf8b6] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@13.113.119.64
+ DEBUG [1d3cf8b6] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [1d3cf8b6] Finished in 0.323 seconds with exit status 0 (successful).
+ DEBUG [a688ebca] Running if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi as app@13.113.119.64
+ DEBUG [a688ebca] Command: if test ! -d /var/www/achieve/current; then echo "Directory does not exist '/var/www/achieve/current'" 1>&2; false; fi
+ DEBUG [a688ebca] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [237e9a18] Running [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid` as app@13.113.119.64
+ DEBUG [237e9a18] Command: [ -e /var/www/achieve/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/achieve/current/tmp/pids/unicorn.pid`
+ DEBUG [237e9a18] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [13bd9ea4] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/achieve/current/config/unicorn/production.rb -E deployment -D  as app@13.113.119.64
+ DEBUG [13bd9ea4] Command: cd /var/www/achieve/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/achieve/current/config/unicorn/production.rb -E deployment -D  )
+  INFO [13bd9ea4] Finished in 3.071 seconds with exit status 0 (successful).
