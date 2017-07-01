@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.20.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -38,10 +38,24 @@ group :development, :test do
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+end
+
+group :test do
+  gem "capybara"
+  gem "database_cleaner"
+  gem "launchy"
+  gem "selenium-webdriver"
 end
 
 gem 'twitter-bootstrap-rails'
@@ -54,10 +68,12 @@ gem 'devise'
 gem 'faker'
 
 group :development do
+  gem 'web-console', '~> 2.0'
+
   gem 'letter_opener_web'
   gem 'pry-rails'
   gem 'better_errors'
-  gem 'dotenv-rails'
+  #gem 'dotenv-rails'
 end
 
 gem 'rails_admin'
@@ -78,3 +94,6 @@ gem 'rb-readline'
 gem 'pusher'
 
 gem 'fog'
+
+gem 'dotenv-rails'
+gem 'unicorn'
